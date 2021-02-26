@@ -142,7 +142,7 @@ class ErrorHandler
             call_user_func($this->previousExceptionHandler, $e);
         }
 
-        if (!headers_sent() && !in_array(strtolower(ini_get('display_errors')), array("on", "yes", "true", "1")) {
+        if (!headers_sent() && !in_array(strtolower(ini_get('display_errors')), array("on", "yes", "true", "1"))) {
             http_response_code(500);
         }
 
